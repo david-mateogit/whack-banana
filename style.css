@@ -1,0 +1,64 @@
+div.bowl {
+  position: relative;
+  overflow: hidden;
+  padding-top: 50px;
+}
+
+div.bowl > p {
+  font-size: 200px;
+  position: relative;
+  z-index: 5;
+  background: white;
+}
+
+div.banana {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  bottom: -2000px;
+  transition: all 0.4s;
+}
+
+div.bowl.show div.banana {
+  position: absolute;
+  bottom: 200px;
+  z-index: 99;
+  font-size: 120px;
+}
+
+.none {
+  display: none !important;
+}
+
+@media screen and (max-width: 760px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+  .timeup {
+    width: unset !important;
+  }
+
+  .bowl p {
+    font-size: 100px !important;
+  }
+
+  div.banana {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    bottom: -2000px;
+    transition: all 0.4s;
+  }
+
+  .banana p {
+    font-size: 70px !important;
+  }
+
+  div.bowl.show div.banana {
+    position: absolute;
+    bottom: 100px;
+    z-index: 99;
+  }
+}
