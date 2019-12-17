@@ -25,7 +25,7 @@ function randomBowl(bowls) {
 }
 
 function show() {
-  const time = randomTime(900, 3000);
+  const time = randomTime(700, 2000);
   const bowl = randomBowl(bowls);
 
   bowl.classList.add('show');
@@ -36,7 +36,6 @@ function show() {
 }
 
 function whack(e) {
-  console.log(this.nextSibling);
   score++;
   this.parentElement.classList.remove('show');
   // this.nextSibling.classList.remove('none');
