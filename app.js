@@ -36,8 +36,15 @@ function show() {
 }
 
 function whack(e) {
+  console.log(this.nextSibling);
   score++;
   this.parentElement.classList.remove('show');
+  // this.nextSibling.classList.remove('none');
+  const span = this.parentElement.childNodes[3].children[0].children[1];
+  span.classList.remove('none');
+  setTimeout(() => {
+    span.classList.add('none');
+  }, 1000);
   scoreBoard.textContent = score;
 }
 
